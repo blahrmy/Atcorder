@@ -5,11 +5,11 @@ int main()
   string s;
   cin>>s;
   
-  int 0or1=0;
+  int a=0;
     for(int i=0;i<3;i++)
       if(s[i]=='1')
-        0or1++;
+        a++;
   
-  cout<<0or1<<'\n';
+  cout<<a<<'\n';
   return 0;
 }
