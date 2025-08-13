@@ -1,0 +1,20 @@
+#include <iostream>
+#include <string>
+
+using namespace std;
+
+int main()
+{
+    string s;
+    cin >> s;
+    int result = 0;
+    for (int i = 0; i < 3; i++)  //for(条件　0開始で0,1,2までの3つ。それまで1回ずつ更新する)
+    {
+        if (s[i] == '1')
+        {
+            result++; //if条件に合致ならresultが1ずつ更新される
+        }
+    }
+    cout << result << "\n";
+    return 0;
+}
