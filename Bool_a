@@ -27,7 +27,7 @@ int main(){
       }
     }
     if(true)
-    count++;
+    count++;  //trueならcountが1ずつ増える（2で割れたってこと）
   }
   
   cout << count << endl;
