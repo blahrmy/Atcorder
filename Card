@@ -3,16 +3,16 @@ using namespace std;
 int main(){
   int n;
   cin>>n;
-  vector<int> a(n);
+  vector<int> a(n);  //まずはvectorで箱をn個つくる
   for(int i=0; i<n; i++){
     cin>>a.at(i);
   }
-  sort(a.begin(),a.end());
-  reverse(a.begin(),a.end());
-  bool aTurn=true;
-  int ascore=0;
-  int bscore=0;
-  for(int i:a){
+  sort(a.begin(),a.end());            //ソートで値を小さい順に並べる
+  reverse(a.begin(),a.end());         //反対に並べる（値を大きい順に並べる）
+  bool aTurn=true;                    //boolでtrueかfalseを定める（intのoか1じゃなくて）
+  int ascore=0;                       //aはAliceのスコア
+  int bscore=0;                       //bはBobのスコア
+  for(int i:a){                       //forで
     if(aTurn){
       ascore+=i;
     }else{
