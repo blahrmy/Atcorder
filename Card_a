@@ -1,0 +1,27 @@
+#include <bits/stdc++.h>
+using namespace std;
+
+int main() {
+  int N;
+  cin >> N;
+  vector<int> A;
+  for (int i = 0; i < N; i++) {
+    int a;
+    cin >> a;
+    A.push_back(a);
+  }
+  
+  sort(A.rbegin(), A.rend());    //大きい順に並び替え
+  int diff = 0;
+  for (int i = 0; i < N; i++) {
+    if (i%2 == 0) {               //施行が偶数回目ならAliceに加算
+      diff += A.at(i);
+    } else {
+      diff -= A.at(i);             //施行が奇数回目ならAliceから減算（AliceスコアからBobのを引算と同じ意味）
+    }
+  }
+  cout << diff << endl;
+  return 0;
+}
+
+//Aliceから減算することで差分を算出する発送には脱帽するすごい
