@@ -1,0 +1,24 @@
+#include <bits/stdc++.h>
+using namespace std;
+int main(){
+  int n;
+  cin>>n;
+  vector<int> a(n);
+  for(int i=0; i<n; i++){
+    cin>>a.at(i);
+  }
+  sort(a.begin(),a.end());
+  reverse(a.begin(),a.end());
+  bool aTurn=true;
+  int ascore=0;
+  int bscore=0;
+  for(int i:a){
+    if(aTurn){
+      ascore+=i;
+    }else{
+      bscore+=i;
+    }
+    aTurn= !aTurn;
+  }
+  cout<<ascore-bscore<<endl;
+}
