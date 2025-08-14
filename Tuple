@@ -1,0 +1,41 @@
+#include <bits/stdc++.h>
+using namespace std;
+ 
+int main() {
+  vector<tuple<int, int, int>> a;  //tupleで組を作成するintとintとintの組をつくるみたい
+  a.push_back(make_tuple(3, 1, 1));  //push_backで松末尾に値(3, 1, 1)を追加
+  a.push_back(make_tuple(1, 2, 100));
+  a.push_back(make_tuple(3, 5, 1));
+  a.push_back(make_tuple(1, 2, 3));
+//*
+ソート前は以下の通り
+1 2 3
+3 5 1
+1 2 100
+3 1 1
+*//
+
+
+  sort(a.begin(), a.end());  
+//*
+ソート後は以下の通り
+1 2 3
+1 2 100
+3 1 1
+3 5 1
+*// 
+  for (tuple<int, int, int> t : a) {
+    int x, y, z;
+    tie(x, y, z) = t;
+    cout << x << " " << y << " " << z << endl;
+  }
+}
+
+
+//*
+実行結果は以下の通り
+1 2 3
+1 2 100
+3 1 1
+3 5 1
+*//
