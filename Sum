@@ -2,12 +2,12 @@
 using namespace std;
 
 int f(int n) {
-  if (n <= 9) {
+  if (n <= 9) {  //1～9は和をとらないから除外している。なるほど。
     return n;
   } else {
     int q = n / 10;
-    int r = n % 10;
-    return r + f(q);
+    int r = n % 10;  //割10だと2桁までしか対応してなくない？いいの？
+    return r + f(q);  //他でも割10なので自分が問題を誤認しているだけかも。。。
   }
 }
 
