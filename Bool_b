@@ -15,7 +15,7 @@ int main(){
   
   for (int x : A){
     if(x%2 == 0){
-      x = x/2;
+      x /= 2;
     }
       count++;
     
