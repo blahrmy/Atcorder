@@ -10,8 +10,8 @@ int main(){
   sort(d.begin(),d.end());  //ソートで小さい順に並び替え
   int c=0;
   int last=0;
-  for(int i:d){            //for (配列の要素の型 変数名 : 配列変数) 
-    if(i!=last){
+  for(int i:d){            //for (配列の要素の型 変数名 : 配列変数) 配列変数dからデータを変数iへコピーするらしい
+    if(i!=last){           //lastは最後（最大サイズ）の鏡餅なのか？iでないものがlastの時にカウントする？意味不明
       c++;
       last=i;
     }
