@@ -17,7 +17,8 @@ int main(){
     if(X%2 == 0){
     x = x/2
     }
-
+      count++
+    
     if(X%2 != 0){
     break;
     }
