@@ -1,0 +1,16 @@
+#include <bits/stdc++.h>
+using namespace std;
+int main(){
+  int n,j;                                    //nは合計枚数、iは最終金額
+  cin>>n>>j;
+  for(int x=0;x<n+1;x++){
+    for(int y=0;y<n-x+1;y++){
+      int i=10000*x+5000*y+1000*(n-x-y);      //iは合計金額
+      if(i==j){                               //合計金額が最終金額になると終了
+        cout<<x<<" "<<y<<" "<<n-x-y<<endl;    //何を表示してるのか不明。" "って何？
+        return 0;
+      }
+    }
+  }
+  cout<<"-1 -1 -1"<<endl;
+}
